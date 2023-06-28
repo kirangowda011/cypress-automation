@@ -36,7 +36,7 @@ it('should use values from cypress.json',() => {
 
     cy.get('.bx--list-box__menu-icon').click()
 
-    cy.contains('SVC-50').click()
+    cy.contains('auto_svc_107').click()
 
     cy.get('.floatingButtons > .bx--btn--primary').click()
 

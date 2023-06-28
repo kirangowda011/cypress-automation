@@ -34,9 +34,14 @@ it('should use values from cypress.json',() => {
 
     cy.wait(10000)
 
-    cy.get(':nth-child(2) > .bx--table-column-checkbox').should('be.visible').click()
+    //cy.get(':nth-child(2) > .bx--table-column-checkbox').should('be.visible').click()
+
+    cy.get('tbody > :nth-child(1) > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').click()
 
     cy.get('.floatingButtons > .bx--btn--primary').click()
+    
+    cy.wait(6000)
+
 
 
 

@@ -15,7 +15,7 @@ describe('data', () => {
 
 it('should use values from cypress.json',() => {
     
-    cy.visit("https://9.114.115.239/")
+    cy.visit(get.url)
 
     cy.get('#username').type(get.userName)
 
@@ -25,18 +25,19 @@ it('should use values from cypress.json',() => {
 
     cy.contains('a', 'HMCs').scrollIntoView().should('be.visible').click()
 
-    cy.contains('Add').should('be.visible').click({force:true})
+    cy.get('.bx--header__menu-trigger').click()
 
-    cy.get('#name').type(get.hmc_name)
+    cy.get('tbody > tr > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').click()
 
-    cy.get('#hmcIP').type(get.hmc_IP)
+    cy.get('.bx--toolbar-content > :nth-child(4)').click()
 
-    cy.get('#userId').type(get.hmc_user_Id)
+    cy.get('.bx--btn--danger').click()
 
-    cy.get('#password').type(get.hmc_password)
+    
 
-    cy.get('.bx--modal-footer > .bx--btn--primary').click()
+
+
 
 });
-
 });
+

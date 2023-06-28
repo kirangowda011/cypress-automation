@@ -25,13 +25,18 @@ it('should use values from cypress.json',() => {
 
     cy.contains('a', 'HMCs').scrollIntoView().should('be.visible').click()
 
-    cy.get('.bx--header__menu-trigger').click()
+    cy.contains('Add').should('be.visible').click({force:true})
 
-    
+    cy.get('#name').type(get.hmc_name)
 
+    cy.get('#hmcIP').type(get.hmc_IP)
 
+    cy.get('#userId').type(get.hmc_user_Id)
 
+    cy.get('#password').type(get.hmc_password)
+
+    cy.get('.bx--modal-footer > .bx--btn--primary').click()
 
 });
-});
 
+});

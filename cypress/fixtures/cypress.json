@@ -1,5 +1,5 @@
 {
-    "url" : "https://9.114.201.221/",
+    "url" : "https://9.114.115.239/",
     "userName" : "root",
     "password" : "passw0rd",
     "hmc_name" : "auto_hmc",
@@ -17,7 +17,6 @@
     "storageHostName" : "9.114.181.50",
     "storageUserName" : "superuser",
     "storageUserPassword" : "passw0rd",
-
     "fabricDisplayName" : "auto_fab1",
     "fabricHostname" : "9.114.181.184",
     "fabricPassword" : "passw0rd",

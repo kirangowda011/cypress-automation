@@ -20,19 +20,17 @@ it('should use values from cypress.json',() => {
 
     cy.get('#loginButton').click()
 
-    cy.contains('a', 'Image list').scrollIntoView().should('be.visible').click()
-
-    cy.wait(10000)
+    cy.contains('a', 'VM list').scrollIntoView().should('be.visible').click()
 
     cy.get('.bx--header__menu-trigger').click()
+    
+    cy.wait(1000)
 
-    cy.get('.bx--toolbar-content > .bx--btn--primary').click()
+    cy.get('tbody > tr > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').click()
 
-    cy.wait(5000)
+    cy.get('.bx--action-list > :nth-child(1)').click()
 
-    cy.get('#name').type(get.image_name)
-
-    cy.get('.floatingButtons > .bx--btn--primary').click()
+    cy.get('.bx--btn--danger').click()
 
 
 
