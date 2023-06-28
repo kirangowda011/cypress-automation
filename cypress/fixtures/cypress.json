@@ -1,0 +1,33 @@
+{
+    "url" : "https://9.114.201.221/",
+    "userName" : "root",
+    "password" : "passw0rd",
+    "hmc_name" : "auto_hmc",
+    "hmc_IP" : "9.114.195.248",
+    "hmc_user_Id" : "hscroot",
+    "hmc_password" : "abc123",
+
+    "network_name" : "auto_network",
+    "vlanID" : "11",
+    "cidr" : "255.255.255.0",
+    "gatewayIP" : "10.0.0.1",
+    "iprange" : "10.0.0.2-10.0.0.99",
+
+    "displayName" : "auto_svc_107",
+    "storageHostName" : "9.114.181.50",
+    "storageUserName" : "superuser",
+    "storageUserPassword" : "passw0rd",
+
+    "fabricDisplayName" : "auto_fab1",
+    "fabricHostname" : "9.114.181.184",
+    "fabricPassword" : "passw0rd",
+
+
+    "volumeName" : "auto_svc_vol",
+    "description" : "test purpose",
+
+
+    "image_name" : "auto_image"
+
+
+}
