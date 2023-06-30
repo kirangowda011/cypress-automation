@@ -26,9 +26,11 @@ it('should use values from cypress.json',() => {
 
     cy.get('tbody > tr > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').click()
 
-    cy.get('.bx--action-list > :nth-child(4)').click()
+    cy.contains('Remove').scrollIntoView().should('be.visible').click()
 
     cy.get('.bx--btn--danger').click()
+
+    cy.wait(1000)
 
     
 

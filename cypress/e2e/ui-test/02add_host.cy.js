@@ -28,15 +28,17 @@ it('should use values from cypress.json',() => {
 
     cy.get('#downshift-0-toggle-button').should('be.visible').click()
 
-    cy.contains('auto_hmc').click()
+    cy.contains('auto_hmc').should('be.visible').click()
 
-    cy.get('#findHostButton').click()
+    cy.get('#findHostButton').should('be.visible').click()
 
     cy.wait(10000)
 
-    //cy.get(':nth-child(2) > .bx--table-column-checkbox').should('be.visible').click()
+    cy.get(':nth-child(2) > .bx--table-sort > .bx--table-sort__flex').click
 
-    cy.get('tbody > :nth-child(1) > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').click()
+    cy.wait(1000)
+
+    cy.get('tbody > tr > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').click()
 
     cy.get('.floatingButtons > .bx--btn--primary').click()
     

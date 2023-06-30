@@ -38,29 +38,15 @@ it('should use values from cypress.json',() => {
 
     cy.get('#storageUserPassword').type(get.storageUserPassword)
 
-    cy.get('.bx--col-lg-5 > .bx--btn--sm').click()
+    cy.get('.bx--col-lg-5 > .bx--btn--sm').should('be.visible').click()
 
     cy.wait(10000)
 
-    cy.get('.floatingButtons > .bx--btn--primary').click()
+    cy.get('.floatingButtons > .bx--btn--primary').should('be.visible').click()
 
-    cy.get('.bx--toolbar-content > .bx--btn--ghost').click()
-
-    cy.wait(5000)
-
-    cy.get('.bx--toolbar-content > .bx--btn--ghost > .bx--btn__icon').click()
+    cy.get('.bx--toolbar-content > .bx--btn--ghost').should('be.visible').click()
 
     cy.wait(5000)
 
-    cy.get('.bx--toolbar-content > :nth-child(5)').click()
-
-
-
-
-
-
-
 });
-
 });
-

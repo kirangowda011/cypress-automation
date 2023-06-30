@@ -20,7 +20,7 @@ it('should use values from cypress.json',() => {
 
     cy.get('#loginButton').click()
 
-    cy.contains('a', 'Data volumes').scrollIntoView().should('be.visible').click()
+    cy.contains('a', 'Storage list').scrollIntoView().should('be.visible').click()
 
     cy.wait(10000)
 
@@ -28,11 +28,13 @@ it('should use values from cypress.json',() => {
 
     cy.get('tbody > tr > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').click()
 
-    cy.get('.bx--action-list > :nth-child(4)').click()
+    cy.contains('Remove').scrollIntoView().should('be.visible').click()
 
-    cy.get('.pills-tab-section > .associate-checkbox > .bx--form-item > .bx--checkbox-label').click()
+    cy.get('.bx--btn--danger').should('be.visible').click()
 
-    cy.get('.bx--modal-footer > .bx--btn--primary').click()
+    cy.wait(1000)
+
+    
 
 
 

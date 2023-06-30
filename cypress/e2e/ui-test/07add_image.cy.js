@@ -32,9 +32,20 @@ it('should use values from cypress.json',() => {
 
     cy.get('#name').type(get.image_name)
 
-    cy.get('#Volume_tab').click()
+    cy.get('#Volume_tab').should('be.visible').click()
 
-    cy.get('.floatingButtons > .bx--btn--primary').click()
+    //cy.get('tbody > :nth-child(1) > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').should('be.visible').click()
+    
+
+    cy.wait(3000)
+
+    cy.get('tbody > tr > .bx--table-column-checkbox > .bx--checkbox--inline > .bx--checkbox-label').click()
+
+    cy.get('.bootOrder').should('be.visible').type('0')
+
+    cy.get('.floatingButtons > .bx--btn--primary').should('be.visible').click()
+
+    cy.wait(5000)
 
 
 

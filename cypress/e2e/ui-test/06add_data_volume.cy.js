@@ -28,11 +28,11 @@ it('should use values from cypress.json',() => {
 
     cy.get('.bx--toolbar-content > .bx--btn--primary').click()
 
-    cy.wait(10000)
+    cy.wait(4000)
 
-    cy.get('#volumeName').type(get.volumeName)
+    cy.get('#volumeName').should('be.visible').type(get.volumeName)
 
-    cy.get('#description').type(get.description)
+    cy.get('#description').should('be.visible').type(get.description)
 
     cy.get('.bx--list-box__menu-icon').click()
 
